@@ -1,0 +1,35 @@
+.Month {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  animation: slowEnter 1.25s ease-in-out;
+  text-align: center;
+  padding: 25px;
+  border-radius: 2px;
+  margin: 5px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.Title,
+.ToggleButton {
+  color: #000;
+}
+
+.ToggleButton:hover {
+  border: 2px solid rgba(255, 255, 255, 1);
+  border-radius: 2px;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.MonthWrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.MonthWrapper a {
+  text-decoration: none;
+}

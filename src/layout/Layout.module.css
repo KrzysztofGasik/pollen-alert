@@ -1,0 +1,13 @@
+.MainWindow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 1;
+  flex: 1 1 90vw;
+}
+
+.Wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

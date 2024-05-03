@@ -1,0 +1,90 @@
+nav {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  order: 1;
+  flex: 1 1 10vw;
+  .MenuVisible {
+    opacity: 1;
+    animation: visibleNav 0.5s ease-in-out;
+  }
+  .MenuHidden {
+    opacity: 0;
+    animation: hiddenNav 0.5s ease-in-out;
+  }
+  ul {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    list-style: none;
+    li {
+      padding: 55px 0;
+      a:visited,
+      a:link {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.4);
+      }
+      a:visited:hover,
+      a:link:hover {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 1);
+      }
+      p {
+        text-align: center;
+        margin: 0 0 0.5rem 0;
+      }
+    }
+  }
+}
+
+.MenuClosed,
+.MenuOpen {
+  font-size: 35px;
+  color: rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+}
+
+.MenuClosed:hover,
+.MenuOpen:hover {
+  color: rgba(0, 0, 0, 1);
+  cursor: grab;
+}
+
+@keyframes visibleNav {
+  0% {
+    opacity: 0;
+    transform: translateX(-25px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes hiddenNav {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-25px);
+  }
+}
+
+.Icon {
+  @media (max-width: 450px) {
+    font-size: 30px;
+  }
+  @media (min-width: 450px) and (max-width: 900px) {
+    font-size: 45px;
+  }
+  @media (min-width: 900px) and (max-width: 1200px) {
+    font-size: 50px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 65px;
+  }
+}

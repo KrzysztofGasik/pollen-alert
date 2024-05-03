@@ -1,0 +1,31 @@
+.Wrapper {
+    max-width: 80vw;
+    margin: 1em auto;
+}
+
+.Crumb {
+    color: #000;
+    text-decoration: none;
+    padding: 0.5em 0;
+    margin-right: 1em;
+    display: inline-block;
+}
+
+.Crumb:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.Crumb:after {
+    content: "-->";
+    margin-left: 1em;
+}
+
+.Crumb:hover:after {
+    cursor: none !important;
+    color: #000 !important;
+}
+
+.Crumb:last-child:after {
+    display: none;
+}

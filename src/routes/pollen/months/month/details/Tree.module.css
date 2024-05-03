@@ -1,0 +1,26 @@
+.Tree {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding: 5px;
+  color: #000;
+  margin: 5px;
+  border: 3px solid rgba(255, 255, 255, 1);
+}
+
+.Tree:hover {
+  border: 3px solid rgba(0, 0, 0, 1);
+}
+
+.TreeTitle {
+  color: #000;
+}
+
+.TreeImg {
+  width: 85px;
+  height: 85px;
+}
+
+.TreeImg:hover {
+  cursor: pointer;
+}

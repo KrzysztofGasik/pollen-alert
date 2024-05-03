@@ -1,0 +1,148 @@
+[
+    {
+        "index": 1,
+        "monthName": "Styczeń",
+        "monthNameForRoute": "january",
+        "trees": [
+            "Leszczyna"
+        ]
+    },
+    {
+        "index": 2,
+        "monthName": "Luty",
+        "monthNameForRoute": "february",
+        "trees": [
+            "Leszczyna",
+            "Olcha",
+            "Cis"
+        ]
+    },
+    {
+        "index": 3,
+        "monthName": "Marzec",
+        "monthNameForRoute": "march",
+        "trees": [
+            "Leszczyna",
+            "Olcha",
+            "Topola",
+            "Wierzba biała"
+        ]
+    },
+    {
+        "index": 4,
+        "monthName": "Kwiecień",
+        "monthNameForRoute": "april",
+        "trees": [
+            "Brzoza",
+            "Topola",
+            "Grab pospolity",
+            "Jesion wyniosły",
+            "Wierzba biała",
+            "Dąb bezszypułkowy",
+            "Cladosporium",
+            "Alternaria"
+        ]
+    },
+    {
+        "index": 5,
+        "monthName": "Maj",
+        "monthNameForRoute": "may",
+        "trees": [
+            "Brzoza",
+            "Dąb bezszypułkowy",
+            "Buk zwyczajny",
+            "Wierzba biała",
+            "Sosna",
+            "Świerk pospolity",
+            "Trawa",
+            "Babka zwyczajna",
+            "Pokrzywa",
+            "Szczaw"
+        ]
+    },
+    {
+        "index": 6,
+        "monthName": "Czerwiec",
+        "monthNameForRoute": "june",
+        "trees": [
+            "Bez czarny",
+            "Lipa",
+            "Platan",
+            "Trawa",
+            "Żyto",
+            "Szczaw",
+            "Babka lancetowata",
+            "Pokrzywa",
+            "Komosa",
+            "Cladosporium",
+            "Alternaria"
+        ]
+    },
+    {
+        "index": 7,
+        "monthName": "Lipiec",
+        "monthNameForRoute": "july",
+        "trees": [
+            "Trawa",
+            "Pokrzywa",
+            "Komosa",
+            "Babka lancetowata",
+            "Szczaw",
+            "Babka szerokolistna",
+            "Bylica",
+            "Cladosporium",
+            "Alternaria"
+        ]
+    },
+    {
+        "index": 8,
+        "monthName": "Sierpień",
+        "monthNameForRoute": "august",
+        "trees": [
+            "Trawa",
+            "Bylica",
+            "Pokrzywa",
+            "Komosa",
+            "Babka lancetowata",
+            "Babka szerokolistna",
+            "Ambrozja",
+            "Cladosporium",
+            "Alternaria"
+        ]
+    },
+    {
+        "index": 9,
+        "monthName": "Wrzesień",
+        "monthNameForRoute": "september",
+        "trees": [
+            "Trawa",
+            "Bylica",
+            "Pokrzywa",
+            "Komosa",
+            "Babka lancetowata",
+            "Babka szerokolistna",
+            "Ambrozja",
+            "Kurz",
+            "Cladosporium",
+            "Alternaria"
+        ]
+    },
+    {
+        "index": 10,
+        "monthName": "Październik",
+        "monthNameForRoute": "october",
+        "trees": [
+            "Trawa",
+            "Bylica",
+            "Pokrzywa",
+            "Komosa",
+            "Babka lancetowata",
+            "Babka szerokolistna",
+            "Ambrozja",
+            "Kurz",
+            "Zwierzęta",
+            "Cladosporium",
+            "Alternaria"
+        ]
+    }
+]
