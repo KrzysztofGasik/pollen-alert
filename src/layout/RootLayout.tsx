@@ -3,9 +3,9 @@ import { Outlet } from "react-router-dom";
 import { Header } from "./header/Header";
 import { Navigation } from "./navigation/Navigation";
 import { Footer } from "./footer/Footer";
-
-import classes from "./Layout.module.css";
 import { Breadcrumbs } from "./breadcrumbs/BreadCrumbs";
+
+import classes from "./RootLayout.module.css";
 
 export const RootLayout: FC = () => {
   return (

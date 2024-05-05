@@ -4,10 +4,11 @@
   align-items: center;
   justify-content: center;
   max-width: 400px;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
   margin: 0 10px;
   border-radius: 5px;
   padding: 25px;
+  color: #fff;
   .Slider {
     animation: slowEnter 1.25s ease-in-out;
     .SlideTitle {
@@ -39,11 +40,6 @@
       color: rgba(255, 255, 255, 1);
     }
   }
-}
-
-.Wrapper:hover {
-  background: rgba(0, 0, 0, 1);
-  cursor: text;
 }
 
 .ArrowLeft,

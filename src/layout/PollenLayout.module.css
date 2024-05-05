@@ -1,0 +1,19 @@
+.Message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15em;
+    height: 15em;
+    background-color: white;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+    padding: 1em;
+}
+
+.Message a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.Message a:hover {
+    text-decoration: underline;
+}
