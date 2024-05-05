@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
-
-import classes from "./Pollen.module.css";
 import { IMonth } from "../../../api";
+
+import classes from "./Months.module.css";
 
 interface PollenData {
   index: number;
@@ -15,7 +15,7 @@ export const Months: FC = () => {
   const data = useLoaderData() as PollenData[];
   return (
     <div className={classes.Wrapper}>
-      <h2 className="home">
+      <h2 className={classes.Header}>
         Aby sprawdzić jaka alergia jest w danym miesiącu kliknij przycisk
         Sprawdź
       </h2>
@@ -38,8 +38,9 @@ const LinkToMonth: FC<{ month: IMonth }> = ({ month }) => {
   const { monthName, monthNameForRoute } = month;
   return (
     <div className={classes.Square} key={monthName}>
-      <span>{monthName}</span>
+      <span className={classes.SquareTitle}>{monthName}</span>
       <button
+        className={classes.SquareButton}
         onClick={() => navigate(`${location.pathname}/${monthNameForRoute}`)}
       >
         Sprawdź

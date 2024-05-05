@@ -16,7 +16,7 @@ import animalImg from "../../../../../images/Animal.png";
 export const Tree = ({ name }: { id: number; name: string }) => {
   return (
     <div className={classes.Tree}>
-      <span className={classes.TreeTitle}>{name}xxx</span>
+      <span className={classes.TreeTitle}>{name}</span>
       <img className={classes.TreeImg} src={getImageForTree(name)} alt={name} />
     </div>
   );
