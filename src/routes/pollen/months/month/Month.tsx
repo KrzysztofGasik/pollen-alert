@@ -21,7 +21,7 @@ export const Month = () => {
         <div className={classes.MonthWrapper}>
           {treeData &&
             treeData.map(({ name, id }) => (
-              <Link to={`${pathname}/${name}`} key={name.toLowerCase()}>
+              <Link to={`${pathname}/${name.toLowerCase()}`} key={name}>
                 <Tree name={name} id={id} />
               </Link>
             ))}

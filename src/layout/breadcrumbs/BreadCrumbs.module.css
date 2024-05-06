@@ -4,28 +4,18 @@
 }
 
 .Crumb {
-    color: #000;
+    color: rgba(0, 0, 0, 0.4);
     text-decoration: none;
-    padding: 0.5em 0;
-    margin-right: 1em;
     display: inline-block;
 }
 
 .Crumb:hover {
     cursor: pointer;
-    color: red;
+    color: rgba(0, 0, 0, 1);
 }
 
-.Crumb:after {
-    content: "-->";
-    margin-left: 1em;
-}
-
-.Crumb:hover:after {
-    cursor: none !important;
-    color: #000 !important;
-}
-
-.Crumb:last-child:after {
-    display: none;
+.Active {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: underline;
+    pointer-events: none;
 }
