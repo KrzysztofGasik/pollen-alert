@@ -19,3 +19,17 @@
     text-decoration: underline;
     pointer-events: none;
 }
+
+.Crumb,
+.Active {
+    animation: takeItSlow linear 1s;
+}
+
+@keyframes takeItSlow {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

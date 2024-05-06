@@ -1,10 +1,10 @@
-import { useLocation, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Breadcrumbs as BreadcrumbsMui } from "@mui/material";
 
 import classes from "./BreadCrumbs.module.css";
+import { FC } from "react";
 
-export const Breadcrumbs = () => {
-  const { pathname } = useLocation();
+export const Breadcrumbs: FC<{ pathname: string }> = ({ pathname }) => {
   let currentLink = "";
   let crumbs = pathname.split("/").filter((crumb: string) => crumb !== "");
   let renderCrumbs = crumbs.map((crumb: string, index: number) => {
@@ -17,7 +17,7 @@ export const Breadcrumbs = () => {
         className={isLast ? classes.Active : classes.Crumb}
         key={crumb}
       >
-        <pre>{crumbLabel}</pre>
+        <p>{crumbLabel}</p>
       </Link>
     ) : null;
   });
