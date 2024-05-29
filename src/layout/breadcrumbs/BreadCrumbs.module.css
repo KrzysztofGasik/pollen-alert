@@ -1,6 +1,8 @@
 .Wrapper {
     max-width: 80vw;
-    margin: 1em auto;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
 }
 
 .Crumb {
@@ -18,18 +20,4 @@
     color: rgba(0, 0, 0, 1);
     text-decoration: underline;
     pointer-events: none;
-}
-
-.Crumb,
-.Active {
-    animation: takeItSlow linear 1s;
-}
-
-@keyframes takeItSlow {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }

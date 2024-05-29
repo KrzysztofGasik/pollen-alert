@@ -3,6 +3,7 @@ import { Breadcrumbs as BreadcrumbsMui } from "@mui/material";
 
 import classes from "./BreadCrumbs.module.css";
 import { FC } from "react";
+import { motion } from "framer-motion";
 
 export const Breadcrumbs: FC<{ pathname: string }> = ({ pathname }) => {
   let currentLink = "";
@@ -23,8 +24,19 @@ export const Breadcrumbs: FC<{ pathname: string }> = ({ pathname }) => {
   });
 
   return (
-    <div className={classes.Wrapper}>
+    <motion.div
+      className={classes.Wrapper}
+      initial={{
+        opacity: 0,
+        y: 100,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+      }}
+      transition={{ delay: 0.3 }}
+    >
       <BreadcrumbsMui>{renderCrumbs}</BreadcrumbsMui>
-    </div>
+    </motion.div>
   );
 };

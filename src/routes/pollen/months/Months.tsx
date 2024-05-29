@@ -1,5 +1,10 @@
 import { FC } from "react";
-import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
+import {
+  Outlet,
+  useLoaderData,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 import { IMonth } from "../../../api";
 
 import classes from "./Months.module.css";
@@ -16,12 +21,11 @@ export const Months: FC = () => {
   return (
     <div className={classes.Wrapper}>
       <h2 className={classes.Header}>
-        Aby sprawdzić jaka alergia jest w danym miesiącu kliknij przycisk
-        Sprawdź
+        To check what your allergy is in a given month, click the button 'Check'
       </h2>
       <span className={classes.Author}>
-        Opracowanie: dr med. Piotr Rapiejko na podstawie pomiarów Ośrodka
-        Badania Alergenów Środowiskowych
+        Prepared by: Piotr Rapiejko, MD, based on the Center's measurements
+        Environmental Allergen Research
       </span>
       <div className={classes.Months}>
         {data.map((singleMonth) => (
@@ -43,7 +47,7 @@ const LinkToMonth: FC<{ month: IMonth }> = ({ month }) => {
         className={classes.SquareButton}
         onClick={() => navigate(`${location.pathname}/${monthNameForRoute}`)}
       >
-        Sprawdź
+        Check
       </button>
     </div>
   );

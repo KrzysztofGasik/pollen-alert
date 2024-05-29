@@ -30,6 +30,7 @@ const router = createBrowserRouter(
       <Route index={true} element={<Home />} />
       <Route path={INFO_ROUTE} element={<Info />} />
       <Route path={POLLEN_ROUTE} element={<PollenLayout />} />
+
       <Route
         path={`${POLLEN_ROUTE}/${MONTHS_ROUTE}`}
         element={<Months />}

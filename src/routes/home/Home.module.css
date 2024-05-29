@@ -1,27 +1,20 @@
 .Wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
 .Home {
-    animation: enter 1s linear;
     text-align: center;
     color: #000;
 }
 
-.Home iframe {
-    flex-grow: 1;
+.FrameWrapper {
+    display: flex;
+    justify-content: center;
 }
 
-@keyframes enter {
-    0% {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+.Frame {
+    margin: 1rem;
+    width: 100%;
+    height: 20rem;
 }

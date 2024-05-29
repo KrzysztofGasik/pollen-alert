@@ -10,6 +10,8 @@ import {
 
 import classes from "./Navigation.module.css";
 import { INFO_ROUTE, POLLEN_ROUTE, ROOT_ROUTE } from "../../router";
+import { Tooltip } from "@mui/material";
+import { motion } from "framer-motion";
 
 interface MenuElements {
   path: string;
@@ -36,32 +38,52 @@ const menuElements: MenuElements[] = [
 ];
 
 export const Navigation: FC = () => {
-  const [swap, setSwap] = useState<boolean>(false);
-  const swapHandler = () => setSwap((prevState) => !prevState);
-  const menuClass = swap ? classes.MenuHidden : classes.MenuVisible;
   return (
-    <nav>
-      {swap ? (
-        <FaBars onClick={swapHandler} className={classes.MenuOpen} />
-      ) : (
-        <FaWindowClose onClick={swapHandler} className={classes.MenuClosed} />
-      )}
-      <RenderMenuElements cssClass={menuClass} items={menuElements} />
-    </nav>
+    <motion.nav
+      className={classes.Nav}
+      initial={{
+        opacity: 0,
+        x: -100,
+      }}
+      animate={{
+        opacity: 1,
+        x: 0,
+      }}
+      transition={{ delay: 0.5 }}
+    >
+      <RenderMenuElements items={menuElements} />
+    </motion.nav>
   );
 };
 
-const RenderMenuElements: FC<{ cssClass: string; items: MenuElements[] }> = ({
-  cssClass,
-  items,
-}) => (
-  <ul className={cssClass}>
+const RenderMenuElements: FC<{ items: MenuElements[] }> = ({ items }) => (
+  <ul className={classes.Menu}>
     {items.map(({ path, name, icon }) => (
-      <li key={path}>
-        <NavLink to={path}>
-          <p>{name}</p>
-          <i className={classes.Icon}>{icon}</i>
-        </NavLink>
+      <li key={path} className={classes.MenuItem}>
+        <Tooltip
+          className={classes.Tooltip}
+          title={name}
+          placement="top"
+          slotProps={{
+            tooltip: {
+              sx: { fontSize: ".75rem" },
+            },
+            popper: {
+              modifiers: [
+                {
+                  name: "offset",
+                  options: {
+                    offset: [0, 30],
+                  },
+                },
+              ],
+            },
+          }}
+        >
+          <NavLink to={path} className={classes.Anchor}>
+            <i className={classes.Icon}>{icon}</i>
+          </NavLink>
+        </Tooltip>
       </li>
     ))}
   </ul>

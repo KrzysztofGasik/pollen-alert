@@ -3,18 +3,16 @@ import classes from "./Footer.module.css";
 
 export const Footer = () => {
   return (
-    <footer>
+    <footer className={classes.Footer}>
       <FooterContact />
-      <span className={classes.Copyright}>
-        Photo by Dawid Zawiła on Unsplash
-      </span>
+      <p className={classes.Copyright}>Photo by Dawid Zawiła on Unsplash</p>
     </footer>
   );
 };
 
 const FooterContact = () => (
   <div className={classes.Contact}>
-    Krzysztof Gasik &copy; 2024 find me on
+    Krzysztof Gasik &copy; 2024
     <a
       href="https://github.com/KrzysztofGasik"
       target="_blank"

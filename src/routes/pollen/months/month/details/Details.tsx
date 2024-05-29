@@ -30,6 +30,7 @@ import Cladosporium from "../../../../../images/Cladosporium.jpg";
 import Alternaria from "../../../../../images/Alternaria.jpg";
 import Kurz from "../../../../../images/Kurz.jpg";
 import Animal from "../../../../../images/Animal.jpg";
+import { motion } from "framer-motion";
 
 const imageArray = [
   Leszczyna,
@@ -77,18 +78,24 @@ export const Details = () => {
   const path: string = pathToImage[0];
 
   return (
-    <Card sx={{ maxWidth: 500 }}>
-      <CardMedia
-        sx={{ height: 250, width: 250, margin: "0.5rem auto" }}
-        component="img"
-        image={path}
-      />
-      <CardContent>
-        <Typography variant="h4">{name}</Typography>
-        <Typography variant="body2">{info}</Typography>
-        <Typography variant="caption">Źródło: Wikipedia</Typography>
-      </CardContent>
-    </Card>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.2 }}
+    >
+      <Card sx={{ maxWidth: 500 }}>
+        <CardMedia
+          sx={{ height: 250, width: 250, margin: "0.5rem auto" }}
+          component="img"
+          image={path}
+        />
+        <CardContent>
+          <Typography variant="h4">{name}</Typography>
+          <Typography variant="body2">{info}</Typography>
+          <Typography variant="caption">Źródło: Wikipedia</Typography>
+        </CardContent>
+      </Card>
+    </motion.div>
   );
 };
 

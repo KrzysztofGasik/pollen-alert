@@ -4,16 +4,17 @@ export const Home = () => {
   return (
     <div className={classes.Wrapper}>
       <h2 className={classes.Home}>
-        Witaj w aplikacji Pollen Alert!
-        <p>Tutaj dowiesz się co obecnie pyli</p>
+        Welcome to the Pollen Alert app!
+        <p>Here you will find out what is currently dusting</p>
       </h2>
-      <iframe
-        title="Pollen-Calendar"
-        src={"http://www.alergen.info.pl/kalendarz_pylenia_roslin.php"}
-        width={800}
-        height={800}
-        sandbox={"allow-scripts"}
-      />
+      <div className={classes.FrameWrapper}>
+        <iframe
+          title="Pollen-Calendar"
+          src={"http://www.alergen.info.pl/kalendarz_pylenia_roslin.php"}
+          sandbox={"allow-scripts"}
+          className={classes.Frame}
+        />
+      </div>
     </div>
   );
 };

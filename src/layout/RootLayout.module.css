@@ -1,13 +1,20 @@
-.MainWindow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  order: 1;
-  flex: 1 1 90vw;
+.Wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.Wrapper {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+.MainWindow {
+    margin: 2rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+@media all and (max-width: 640px) {
+    .MainWindow {
+        margin: 2rem 0 4rem 0;
+    }
 }

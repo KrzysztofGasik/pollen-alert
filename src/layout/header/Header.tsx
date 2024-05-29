@@ -1,9 +1,21 @@
-import "./Header.module.css"
+import { motion } from "framer-motion";
+import "./Header.module.css";
 
 export const Header = () => {
   return (
-    <header>
-      <h1>Pollen Allert</h1>
-    </header>
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: -100,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+      }}
+    >
+      <header>
+        <h1>Pollen Allert</h1>
+      </header>
+    </motion.div>
   );
 };

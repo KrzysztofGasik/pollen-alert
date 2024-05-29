@@ -6,6 +6,7 @@ import { Footer } from "./footer/Footer";
 import { Breadcrumbs } from "./breadcrumbs/BreadCrumbs";
 
 import classes from "./RootLayout.module.css";
+import { motion } from "framer-motion";
 
 export const RootLayout: FC = () => {
   const { pathname } = useLocation();
@@ -13,12 +14,23 @@ export const RootLayout: FC = () => {
     <>
       <Header />
       <Breadcrumbs pathname={pathname} />
-      <div className={classes.Wrapper}>
-        <Navigation />
+      <Navigation />
+      <motion.div
+        className={classes.Wrapper}
+        initial={{
+          opacity: 0,
+          x: 200,
+        }}
+        animate={{
+          opacity: 1,
+          x: 0,
+        }}
+        transition={{ delay: 0.8 }}
+      >
         <main className={classes.MainWindow}>
           <Outlet />
         </main>
-      </div>
+      </motion.div>
       <Footer />
     </>
   );
