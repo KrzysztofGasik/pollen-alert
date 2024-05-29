@@ -14,7 +14,7 @@ export const Header = () => {
       }}
     >
       <header>
-        <h1>Pollen Allert</h1>
+        <h1>Pollen Alert</h1>
       </header>
     </motion.div>
   );
